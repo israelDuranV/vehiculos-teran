@@ -1,0 +1,61 @@
+<div class="row" *ngFor="let item of vehicles.vehicles">
+    <div class="col-md-12" *ngIf="item.vehicleID === autoId">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Vehiculo seleccionado</h1>
+                <img [src]="item.thumbnail" class="img-fluid" width="100%">
+            </div>
+
+
+            <div class="col-md-8">
+                <table class="table table-stripped">
+                    <thead>
+                        <th>Dato</th>
+                        <th>Descripción</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nombre</td>
+                            <td>{{item.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td>{{item.price}}</td>
+                        </tr>
+                        <tr>
+                            <td>CVE</td>
+                            <td>
+                                {{item.cveVehicle}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CVE BRAND</td>
+                            <td>
+                                {{item.cveBrand}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CVE GAMA</td>
+                            <td>
+                                {{item.cveGama}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SLUG</td>
+                            <td>
+                                {{item.slug}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CASOS</td>
+                            <td>
+                                <span class="badge badge-primary m-2 p-2" *ngFor="let caso of item.casos"> {{caso}} </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

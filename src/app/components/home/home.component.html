@@ -1,0 +1,4 @@
+<h1 class="text-center p-5">Selecciona un vehiculo</h1>
+<div class="form-group animated fadeInDown" *ngFor="let item of vehicles.vehicles; let i = index">
+    <button class="btn btn-success btn-block" *ngIf="i < 5" (click)="showVehicle(item.vehicleID)">{{item.name}}</button>
+</div>
